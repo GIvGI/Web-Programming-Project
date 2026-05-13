@@ -11,7 +11,22 @@ body {
     color: #DBE2EF;
 }
 
-#header {
+a {
+  color: #BBE1FA;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+p {
+  color:#1B262C;
+}
+
+
+/*index.html*/
+
+/*Header*/
+header {
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -24,23 +39,16 @@ body {
   z-index: 99;
 }
 
-nav {
+header nav {
   flex: 1;
   margin-left: 40px;
 }
 
-nav ul {
+header nav ul {
   font-size: 25px;
   display:flex;
   justify-content: space-between;
   list-style: none;
-}
-
-a {
-  color: #BBE1FA;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
 }
 
 header a:hover {
@@ -49,8 +57,8 @@ header a:hover {
 
 
 
-
-#main {
+/* main */
+#main-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,10 +74,12 @@ header a:hover {
 #description {
   font-size: xx-large;
   padding: 30px;
+  color:#1B262C;
 }
 
 #choose-level {
   font-size: x-large;
+  color:#1B262C;
 }
 
 .levels {
@@ -100,16 +110,19 @@ header a:hover {
   border-radius: 0px;
 }
 
-p {
-  color: #1B262C;
+section:has(.levels:hover) {
+  animation-name: colorchange;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+@keyframes colorchange {
+  100% {background-image: url('../images/circlesoutline.svg');}
 }
+
+
+
+
 
 
 
@@ -118,39 +131,30 @@ footer {
 
 
 /*A1-A2 Page*/
-#A1-A2main {
+#A1-A2 {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
   background: #BBE1FA;
   min-height: 100dvh;  
+  background-image: url('../images/wavesblue.svg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .roadmap-steps {
-  flex:1;
+  width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction:column;
-  width: 100%;
   gap:200px;
-  max-width: 1000px;
 
   font-weight: bold;
   font-size: 1.2rem;
   padding: 100px;
   text-align: center;
-  position:relative;
-  flex-shrink: 0;
-}
-
-.roadmap-steps:nth-of-type(odd) {
-  align-self: flex-start;
-}
-
-.roadmap-steps:nth-of-type(even) {
-  align-self: flex-end;
 }
 
 .roadmap-steps > div {
@@ -166,22 +170,68 @@ footer {
   padding: 10px 20px;
   box-shadow: 15px 15px 0px #F4A16A;
   transition: transform 0.3s ease;
+  width: 400px;
 }
 
 .roadmap-steps p:hover {
   background-color: #F4A16A;
-  transform: translateX(5px);
+  transform: translateX(5px) skew(-3deg,0deg);
+}
+
+.details-for-every-topic {
+  position: fixed;
+  right: 0;
+  width:50%;
+  height: 100dvh;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4A16A;
+  outline-color: #1B262C;
+  outline-style: solid;
+  background-image: url('../images/peaksorange.svg');
+  background-size: cover;
+}
+
+.detailed-content {
+  display:none;
+  color: #1B262C;
+  text-align: center;
+}
+
+.detailed-content:target{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailed-content:target h2, h3{
+  padding: 50px 0px 20px 0px;
+}
+
+.detailed-content ul {
+  list-style: none;
+}
+.detailed-content li{
+  padding: 5px 0px;
 }
 
 
-.details-for-every-topic {
-    flex: 1;
-    padding: 0px;
-    background-color: #FAD4BB;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    height: 100vh;
-    top:0;
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
