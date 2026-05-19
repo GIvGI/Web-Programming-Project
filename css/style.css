@@ -6,11 +6,6 @@
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-body {
-    background-color: #F9F7F7; 
-    color: #DBE2EF;
-}
-
 a {
   color: #BBE1FA;
   text-decoration: none;
@@ -30,13 +25,13 @@ header {
   display:flex;
   justify-content: space-between;
   align-items: center;
+
   position: sticky;
   top: 0;
-  background: #1B262C;
-  color: white;
-  padding: 10px;
-  text-align: center;
   z-index: 99;
+
+  background: #1B262C;
+  padding: 10px;
 }
 
 header nav {
@@ -45,7 +40,7 @@ header nav {
 }
 
 header nav ul {
-  font-size: 25px;
+  font-size: 1.5rem;
   display:flex;
   justify-content: space-between;
   list-style: none;
@@ -134,43 +129,38 @@ section:has(.levels:hover) {
 #A1-A2 {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  background: #BBE1FA;
-  min-height: 100dvh;  
+  min-height: 100dvh;
+
+
   background-image: url('../images/wavesblue.svg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+
+  overflow: auto;
 }
 
 .roadmap-steps {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  flex-direction:column;
-  gap:200px;
+  flex: 1;
 
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 100px;
-  text-align: center;
-}
-
-.roadmap-steps > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  position: relative;
+  gap: 150px;
+  padding: 100px 20px;
+
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .roadmap-steps p {
   background-color: #FAD4BB;
   padding: 10px 20px;
   box-shadow: 15px 15px 0px #F4A16A;
-  transition: transform 0.3s ease;
   width: 400px;
+  text-align: center;
+
+  transition: transform 0.3s ease;
 }
 
 .roadmap-steps p:hover {
@@ -179,26 +169,27 @@ section:has(.levels:hover) {
 }
 
 .details-for-every-topic {
-  position: fixed;
-  right: 0;
-  width:50%;
-  height: 100dvh;
-
+  flex: 1;
+  
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   background-color: #F4A16A;
-  outline-color: #1B262C;
-  outline-style: solid;
   background-image: url('../images/peaksorange.svg');
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  border-left: 5px solid #1B262C;
 }
 
 .detailed-content {
   display:none;
   color: #1B262C;
   text-align: center;
+
+  padding-top: 80px;
 }
 
 .detailed-content:target{
@@ -207,8 +198,34 @@ section:has(.levels:hover) {
   align-items: center;
 }
 
-.detailed-content:target h2, h3{
+.detailed-content:target h2, h3, h4{
   padding: 50px 0px 20px 0px;
+}
+
+.detailed-content:target h5, h6 {
+  padding: 70px 0px 10px;
+  color:#BBE1FA;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.additional-content {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.sub-information {
+  padding: 20px 0px 0px 0px;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.sub-sub-information {
+  padding: 00px 0px 0px 0px;
+  font-size: 0.75rem;
+  font-style: italic;
 }
 
 .detailed-content ul {
@@ -220,18 +237,65 @@ section:has(.levels:hover) {
 
 
 
+/*mobile responsiveness*/
+@media (max-width: 768px) {
+  header{
+    gap: 15px;
+    padding: 15px;
+  }
+
+  header nav {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  header nav ul {
+    font-size: 16px;
+    justify-content: center;
+    gap:20px;
+    flex-wrap: wrap;
+  }
 
 
 
+  
+  #A1-A2 {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .roadmap-steps p{
+    width:100%;
+    max-width: 320px;
+    font-size: 1rem;
+  }
 
-
-
+  .details-for-every-topic{
+    border: none;
+    min-height: 100dvh;
+    border-top: 5px solid #1B262C;
+  }
+  
+}
 
 
 /* footer */
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #1B262C;
+  padding: 10px;
+}
+
+footer ul {
+  font-size: 1.2rem;
+  display:flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+footer a:hover {
+  background-color: #0F4C75;
 }
