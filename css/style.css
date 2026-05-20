@@ -48,6 +48,7 @@ header nav ul {
 
 header a:hover {
   background-color: #0F4C75;
+  background-image: linear-gradient(to right, rgba(50,130,184,1), rgba(15,76,117,1));
 }
 
 
@@ -70,11 +71,13 @@ header a:hover {
   font-size: xx-large;
   padding: 30px;
   color:#1B262C;
+  text-align: center;
 }
 
 #choose-level {
   font-size: x-large;
   color:#1B262C;
+  text-align: center;
 }
 
 .levels {
@@ -96,16 +99,19 @@ header a:hover {
   outline-style: solid;
   color: #1B262C;
   font-size: 25px;
+
+  transition: transform 0.3s ease;
 }
 
 .levels p:hover {
   background-color: #0F4C75;
+  transform: translateX(5px) skew(-3deg,0deg);
 }
 .levels a {
   border-radius: 0px;
 }
 
-section:has(.levels:hover) {
+section:has(.levels p:hover) {
   animation-name: colorchange;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -209,6 +215,15 @@ section:has(.levels:hover) {
   font-style: italic;
 }
 
+h5::before, h5::after{
+  content:"";
+  background-image: radial-gradient(circle,#BBE1FA, #F4A16A);
+  display:block;
+  width: 110%;
+  height:6px;
+  margin-left: -5%;
+}
+
 .additional-content {
   font-weight: bold;
   font-style: italic;
@@ -257,8 +272,24 @@ section:has(.levels:hover) {
   }
 
 
+  #description {
+    font-size: x-large;
+  }
+
+  #choose-level {
+    font-size: large;
+  }
+
+  .levels {
+    gap: 50px;
+    margin-bottom: 30px;
+  }
 
   
+
+
+
+
   #A1-A2 {
     flex-direction: column;
     height: auto;
@@ -298,4 +329,5 @@ footer ul {
 
 footer a:hover {
   background-color: #0F4C75;
+  background-image: linear-gradient(to right, rgba(50,130,184,1), rgba(15,76,117,1));
 }
