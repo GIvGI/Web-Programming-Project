@@ -83,8 +83,11 @@ header a:hover {
 .levels {
   display:flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
   margin-top: 100px;
+}
+.levels {
+  list-style: none;
 }
 
 .levels p {
@@ -159,17 +162,31 @@ section:has(.levels p:hover) {
   font-size: 1.2rem;
 }
 
-.roadmap-steps p {
+.roadmap-steps ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:20px;
+  padding: 0px;
+  list-style: none
+}
+
+.roadmap-steps li {
   background-color: #FAD4BB;
   padding: 10px 20px;
   box-shadow: 15px 15px 0px #F4A16A;
   width: 400px;
-  text-align: center;
 
   transition: transform 0.3s ease;
 }
 
-.roadmap-steps p:hover {
+.roadmap-steps li a {
+  display: block;
+  text-align: center;
+  color: #1B262C;
+}
+
+.roadmap-steps li:hover {
   background-color: #F4A16A;
   transform: translateX(5px) skew(-3deg,0deg);
 }
@@ -238,9 +255,9 @@ h5::before, h5::after{
 }
 
 .sub-sub-information {
-  padding: 00px 0px 0px 0px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-style: italic;
+  display:block;
 }
 
 .detailed-content ul {
@@ -248,6 +265,133 @@ h5::before, h5::after{
 }
 .detailed-content li{
   padding: 5px 0px;
+}
+
+
+
+
+
+#signing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+
+  background-image: url('../images/blobs.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  font-size: 1.3rem;
+}
+
+#signing form legend {
+  display: none;
+}
+
+#signing form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color:#1B262C;
+  padding: 20px;
+  color: #BBE1FA;
+}
+
+#signing form label {
+  display: flex;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#signing form {
+  width:100%;
+  max-width: 700px;
+  box-shadow: 25px 25px 0px #1B262C;
+  margin: 50px 0px 100px 0px;
+}
+
+#signing form input {
+  padding: 10px;
+  width:100%;
+  margin: 5px 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #0F4C75;
+  color:#BBE1FA;
+  font-size: 1.0rem;
+  border:none;
+}
+
+#signing form input::placeholder {
+  color:#BBE1FA;
+}
+
+#signing form input:focus {
+  background-color: #3282B8;
+}
+
+#signing form select {
+    background-color: #0F4C75;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    color:#BBE1FA;
+    font-size: 1.0rem;
+    border:none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#signing form .submit:hover {
+  background-color: #3282B8;
+}
+#signing .submit {
+  padding: 15px;
+  margin-top: 50px; 
+}
+
+
+#signing.login {
+  background-image: url('../images/blob-log-in.svg')
+}
+
+
+.references {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+  min-height: 100dvh;
+
+
+  background-image: url('../images/about-page-background.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.resources-title{
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 20px 0px 20px 0px;
+}
+
+.references ul {
+  list-style: none;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+.references ul a {
+  color:#F4A16A;
+  font-weight: bold;
+}
+
+.references p {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 20px 0px 20px 0px;
 }
 
 
@@ -295,7 +439,7 @@ h5::before, h5::after{
     height: auto;
   }
   
-  .roadmap-steps p{
+  .roadmap-steps ul{
     width:100%;
     max-width: 320px;
     font-size: 1rem;
