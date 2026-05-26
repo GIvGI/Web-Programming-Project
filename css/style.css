@@ -221,8 +221,13 @@ section:has(.levels p:hover) {
   align-items: center;
 }
 
-.detailed-content:target h2, h3, h4{
+.detailed-content:target h2{
   padding: 50px 0px 20px 0px;
+}
+
+.detailed-content:target h3, h4{
+  margin-top: 20px;
+  font-size: 1rem;
 }
 
 .detailed-content:target h5, h6 {
@@ -254,10 +259,27 @@ h5::before, h5::after{
   font-weight: bold;
 }
 
+.sub-information::before{
+  content: "▸"
+}
+
 .sub-sub-information {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: italic;
   display:block;
+}
+
+.special-information{
+  background-color: rgba(50,130,184,0.9);
+  margin: 20px;
+  padding: 10px;
+  font-weight: bold;
+  box-shadow: 10px 10px 0px rgba(50,130,184,0.5);
+}
+
+.special-sub-information{
+  font-size: 0.9rem;
+  font-weight: normal;
 }
 
 .detailed-content ul {
@@ -265,6 +287,10 @@ h5::before, h5::after{
 }
 .detailed-content li{
   padding: 5px 0px;
+}
+
+.detailed-content div{
+  margin: 30px;
 }
 
 
