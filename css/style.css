@@ -17,6 +17,19 @@ p {
   color:#1B262C;
 }
 
+header img {
+    width: 60px;
+    height:50px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 5px; 
+    font-size: 0.6rem;
+}
+
 
 /*index.html*/
 
@@ -207,6 +220,22 @@ section:has(.levels p:hover) {
   border-left: 5px solid #1B262C;
 }
 
+.Introductions {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position:sticky;
+  top:10dvh;
+  width:auto;
+  padding: 20px;
+  background-color:#F4A16A;
+  box-shadow: 15px 15px 0px #FAD4BB;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .detailed-content {
   display:none;
   color: #1B262C;
@@ -297,7 +326,7 @@ h5::before, h5::after{
 
 
 
-#signing {
+.signing {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,11 +341,11 @@ h5::before, h5::after{
   font-size: 1.3rem;
 }
 
-#signing form legend {
+.signing form legend {
   display: none;
 }
 
-#signing form fieldset {
+.signing form fieldset {
   border: none;
   padding: 0;
   margin: 0;
@@ -325,20 +354,20 @@ h5::before, h5::after{
   color: #BBE1FA;
 }
 
-#signing form label {
+.signing form label {
   display: flex;
   padding: 10px;
   margin-top: 20px;
 }
 
-#signing form {
+.signing form {
   width:100%;
   max-width: 700px;
   box-shadow: 25px 25px 0px #1B262C;
   margin: 50px 0px 100px 0px;
 }
 
-#signing form input {
+.signing form input {
   padding: 10px;
   width:100%;
   margin: 5px 0;
@@ -350,15 +379,15 @@ h5::before, h5::after{
   border:none;
 }
 
-#signing form input::placeholder {
+.signing form input::placeholder {
   color:#BBE1FA;
 }
 
-#signing form input:focus {
+.signing form input:focus {
   background-color: #3282B8;
 }
 
-#signing form select {
+.signing form select {
     background-color: #0F4C75;
     width: 100%;
     padding: 10px;
@@ -370,16 +399,16 @@ h5::before, h5::after{
     margin: 5px 0;
 }
 
-#signing form .submit:hover {
+.signing form .submit:hover {
   background-color: #3282B8;
 }
-#signing .submit {
+.signing .submit {
   padding: 15px;
   margin-top: 50px; 
 }
 
 
-#signing.login {
+.signing.login {
   background-image: url('../images/blob-log-in.svg')
 }
 
@@ -469,6 +498,7 @@ h5::before, h5::after{
     width:100%;
     max-width: 320px;
     font-size: 1rem;
+    margin-right: 10px;
   }
 
   .details-for-every-topic{
@@ -477,6 +507,27 @@ h5::before, h5::after{
     border-top: 5px solid #1B262C;
   }
   
+  .Introductions{font-size:0.8rem;}
+
+
+
+
+
+
+  .signing form{
+    width:80%;
+  }
+
+  .references ul, .references p{
+    font-size: 1.0rem;
+  }
+
+}
+
+@media(max-width: 1200px) and (min-width: 768px){
+  .Introductions {
+    font-size: 0.65rem;
+  }
 }
 
 
