@@ -311,6 +311,16 @@ h5::before, h5::after{
   font-weight: normal;
 }
 
+.example {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.roadmap-steps_coming-soon li{
+  box-shadow: 0px 30px 0px #F4A16A;
+  font-size: x-large;
+}
+
 .detailed-content ul {
   list-style: none;
 }
