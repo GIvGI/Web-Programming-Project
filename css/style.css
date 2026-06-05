@@ -228,8 +228,8 @@ section:has(.levels p:hover) {
   top:35dvh;
 
   padding: 20px;
-  background-color:#F4A16A;
-  box-shadow: 15px 15px 0px #FAD4BB;
+  background-color: rgb(244, 161, 106);
+  box-shadow: 15px 15px 0px rgb(250, 212, 187);
 
   font-weight: bold;
   font-size: 1.2rem;
